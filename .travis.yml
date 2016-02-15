@@ -23,7 +23,7 @@ script:
   - mv Flex-1.1/templates/* mombacho/templates/ ; rmdir Flex-1.1/templates/
   - mv Flex-1.1/* mombacho/
   - rm -Rf Flex-1.1/
-  - cd ../
+  - cd ../ ; pwd
 
   # Retrieves Leaflet library
   - cd themes/mombacho/static/
