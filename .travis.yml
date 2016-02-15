@@ -39,7 +39,7 @@ script:
   - wget https://github.com/vogdb/Leaflet.ActiveLayers/archive/0.2.0.tar.gz ; tar -xvf 0.2.0.tar.gz ; rm 0.2.0.tar.gz
   - mv Leaflet.ActiveLayers-0.2.0/src/ActiveLayers.js ./
   - rm -Rf Leaflet.ActiveLayers-0.2.0
-  - cd ../../../../ ; pwd
+  - cd ../../../../../ ; pwd
 
   # Retrieves Leaflet ajax
   - cd themes/mombacho/static/js/leaflet/
