@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 BRANCH=master
-TARGET_REPO=bogomap/bogomap.github.io.git
+TARGET_REPO=BogoMap/bogomap.github.io.git
 PELICAN_OUTPUT_FOLDER=output
 
 echo -e "Building rutas.bogomap.co"
