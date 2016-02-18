@@ -3,62 +3,86 @@ branches:
   - master
 language: python
 python:
-- 2.7
+  - 2.7
+
 install:
-- sudo apt-get update -qq
-- sudo apt-get install python-pip curl -y
-- pip install -r requirements.txt --use-mirrors
+  # Updates the catalog.
+  - sudo apt-get update -qq
+  # Installs the packages.
+  - sudo apt-get install python-pip curl -y
+  # Installs the Python packages for Pelican.
+  - pip install -r requirements.txt --use-mirrors
+
 script:
-- cd themes/
-- wget https://github.com/alexandrevicenzi/Flex/archive/v1.1.tar.gz ; tar -xvf v1.1.tar.gz
-  ; rm v1.1.tar.gz
-- mv Flex-1.1/static/css/* mombacho/static/css/ ; rmdir Flex-1.1/static/css/
-- mv Flex-1.1/static/* mombacho/static/ ; rmdir Flex-1.1/static/
-- mv Flex-1.1/templates/partial/* mombacho/templates/partial/ ; rmdir Flex-1.1/templates/partial/
-- mv Flex-1.1/templates/* mombacho/templates/ ; rmdir Flex-1.1/templates/
-- mv Flex-1.1/* mombacho/
-- rm -Rf Flex-1.1/
-- cd ../ ; pwd
-- cd themes/mombacho/static/
-- wget http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip ; unzip leaflet.zip ; rm
-  leaflet.zip
-- mv images css/
-- mv leaflet.css css/
-- mv leaflet.js js/
-- cd ../../../ ; pwd
-- cd themes/mombacho/static/js/
-- mkdir leaflet ; cd leaflet
-- wget https://github.com/vogdb/Leaflet.ActiveLayers/archive/0.2.0.tar.gz ; tar -xvf
-  0.2.0.tar.gz ; rm 0.2.0.tar.gz
-- mv Leaflet.ActiveLayers-0.2.0/src/ActiveLayers.js ./
-- rm -Rf Leaflet.ActiveLayers-0.2.0
-- cd ../../../../../ ; pwd
-- cd themes/mombacho/static/js/leaflet/
-- wget https://github.com/calvinmetcalf/leaflet-ajax/archive/v2.0.0.tar.gz ; tar -xvf
-  v2.0.0.tar.gz ; rm v2.0.0.tar.gz
-- cd ../../../../../ ; pwd
-- cd themes/mombacho/static/js/leaflet/
-- wget https://raw.githubusercontent.com/mlevans/leaflet-hash/master/leaflet-hash.js
-- cd ../../../../../ ; pwd
-- cd themes/mombacho/static/js/leaflet/
-- wget https://github.com/Leaflet/Leaflet.label/archive/0.2.1.tar.gz ; tar -xvf 0.2.1.tar.gz
-  ; rm 0.2.1.tar.gz
-- cd ../../../../../ ; pwd
-- cd themes/mombacho/static/js/
-- wget https://github.com/less/less.js/archive/v2.5.1.tar.gz ; tar -xvf v2.5.1.tar.gz
-  ; rm v2.5.1.tar.gz
-- mv less.js-2.5.1/dist/less.min.js ./
-- rm -Rf less.js-2.5.1
-- cd ../../../../ ; pwd
-- pelican
-- find .
+  # Installs Pelican
+  - export PYTHONIOENCODING=utf-8
+  - executeQuickStart
+  - mv pelicanconfOriginal.py pelicanconf.py
+
+  # Retrieves the Flex template
+  - cd themes/
+  - wget https://github.com/alexandrevicenzi/Flex/archive/v1.1.tar.gz ; tar -xvf v1.1.tar.gz ; rm v1.1.tar.gz
+  - mv Flex-1.1/static/css/* mombacho/static/css/ ; rmdir Flex-1.1/static/css/
+  - mv Flex-1.1/static/* mombacho/static/ ; rmdir Flex-1.1/static/
+  - mv Flex-1.1/templates/partial/* mombacho/templates/partial/ ; rmdir Flex-1.1/templates/partial/
+  - mv Flex-1.1/templates/* mombacho/templates/ ; rmdir Flex-1.1/templates/
+  - mv Flex-1.1/* mombacho/
+  - rm -Rf Flex-1.1/
+  - cd ../ ; pwd
+
+  # Retrieves Leaflet library
+  - cd themes/mombacho/static/
+  - wget http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip ; unzip leaflet.zip ; rm leaflet.zip
+  - mv images css/
+  - mv leaflet.css css/
+  - mv leaflet.js js/
+  - cd ../../../ ; pwd
+
+  # Retrieves Leaflet ActiveLayers library
+  - cd themes/mombacho/static/js/
+  - mkdir leaflet ; cd leaflet
+  - wget https://github.com/vogdb/Leaflet.ActiveLayers/archive/0.2.0.tar.gz ; tar -xvf 0.2.0.tar.gz ; rm 0.2.0.tar.gz
+  - mv Leaflet.ActiveLayers-0.2.0/src/ActiveLayers.js ./
+  - rm -Rf Leaflet.ActiveLayers-0.2.0
+  - cd ../../../../../ ; pwd
+
+  # Retrieves Leaflet ajax
+  - cd themes/mombacho/static/js/leaflet/
+  - wget https://github.com/calvinmetcalf/leaflet-ajax/archive/v2.0.0.tar.gz ; tar -xvf v2.0.0.tar.gz ; rm v2.0.0.tar.gz 
+  - cd ../../../../../ ; pwd
+
+  # Retrieves Leaflet hash
+  - cd themes/mombacho/static/js/leaflet/
+  - wget https://raw.githubusercontent.com/mlevans/leaflet-hash/master/leaflet-hash.js
+  - cd ../../../../../ ; pwd
+
+  # Retrieves Leaflet label
+  - cd themes/mombacho/static/js/leaflet/
+  - wget https://github.com/Leaflet/Leaflet.label/archive/0.2.1.tar.gz ; tar -xvf 0.2.1.tar.gz ; rm 0.2.1.tar.gz
+  - cd ../../../../../ ; pwd
+
+  # Retrieves Less library
+  - cd themes/mombacho/static/js/
+  - wget https://github.com/less/less.js/archive/v2.5.1.tar.gz ; tar -xvf v2.5.1.tar.gz ; rm v2.5.1.tar.gz
+  - mv less.js-2.5.1/dist/less.min.js ./
+  - rm -Rf less.js-2.5.1
+  - cd ../../../../ ; pwd
+
+  # Generates the package
+  - pelican
+  - find .
+
 notifications:
   email:
     on_success: always
     on_failure: always
+
 env:
   global:
     secure: W+b6iayVWkusImAXBtu889vmXXVR9JkZWBIql/lkmmQBzw0fLQOm9AVWeOJcB440xTR2W5AQuSIJnusyrt+sNhU3buDW/bs3QtLz4Bg0HTBz27r/6oeElJW3KGp/9lEYLI/mDR/pJuU88F7qq2SLriGBmy5z0MMoMSzsXRgrkapd1Mbz8u+6GWwyzjc7K0CEOeC1NdhmetKwOOr0cP7q+9ZwtgWeWEXEVQ08h2SApbKCBYiwUqtu8M3ZFJDYbPJYeia+g/jTV0dETB6RyHeKxPp8aJmPzYGIsASRsFh/PhsIIA7C7FTA+ZqUKliNYGgRPDMLDS2Vngcd0MImMW2eWyxfH+d+zt+zujjeHDAzhzV0fCOGgKNPtYZ5rfhboN9/lp1wFjFlINFTIt90r+uHU/azlGtPD+WU8q1DSmI2ulwZzhew+VlBjDnoP/6Vsox9X+jog5+gF+fVTsxffdII5KsqwZlisYdYmUO8RhFWiclZc7Bv+ZcuSmOlyr+PATH70BRHiCPHbBR7gGFRtbqOIMaz6lwhrygIu2ACMRGsgWdZkUELWpbTEL/gs70wUOa124vdHR/w0hzrNcSKJcFdSVvWSsAodOR/MG1OCuC1dPyzCfgxWlkQm94XBLjg0cw2XyqnYOQjxInUveKNaPSuTjCWtss4I9rtzFd5Bl9WimY=
+
 before_install:
-- git submodule update --init --recursive
+  - git submodule update --init --recursive
+
 after_success: bash deploy.sh
+

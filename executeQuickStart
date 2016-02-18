@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pelican-quickstart <<EOF.
+BogoMap.co - Mapa del sistema de transporte de Bogota
+Equipo BogoMap
+es
+y
+http://rutas.bogomap.co
+n
+America/Bogota
+y
+y
+n
+n
+n
+n
+n
+y
+y
+EOF
+
