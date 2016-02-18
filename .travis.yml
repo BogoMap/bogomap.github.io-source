@@ -16,7 +16,7 @@ install:
 script:
   # Installs Pelican
   - export PYTHONIOENCODING=utf-8
-  - executeQuickStart
+  - ./executeQuickStart
   - mv pelicanconfOriginal.py pelicanconf.py
 
   # Retrieves the Flex template
