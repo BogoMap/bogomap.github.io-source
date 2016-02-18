@@ -27,6 +27,8 @@ TIMEZONE = 'America/Bogota'
 #DIRECT_TEMPLATES = ('index')
 # PELICAN - A list of directories (relative to PATH) in which to look for static files.
 STATIC_PATHS = ['images','php']
+# Whether to display pages on the menu of the template.
+# DISPLAY_PAGES_ON_MENU = true
 
 # URL settings
 
