@@ -59,9 +59,10 @@ script:
 
   # Retrieves Leaflet zoomslider
   - cd themes/mombacho/static/js/leaflet/
+  - mkdir zoomslider/ ; cd zoomslider/
   - wget https://github.com/kartena/Leaflet.zoomslider/archive/v0.7.0.tar.gz ; tar -xvf v0.7.0.tar.gz ; rm v0.7.0.tar.gz
   - mv Leaflet.zoomslider-0.7.0/src/L.Control.Zoomslider.* . ; rm -Rf Leaflet.zoomslider-0.7.0
-  - cd ../../../../../ ; pwd
+  - cd ../../../../../../ ; pwd
 
   # Retrieves Leaflet label
   - cd themes/mombacho/static/js/leaflet/
