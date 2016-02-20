@@ -1,5 +1,14 @@
 #!/bin/bash
 
+rm -Rf themes
+git checkout themes
+rm Makefile develop_server.sh fabfile.py pelicanconf.py
+git checkout pelicanconfOriginal.py
+grep -v -e '^SITEURL' pelicanconfOriginal.py | sed -e 's/^#SITEURL/SITEURL/' > pelicanconfOriginal.py2
+mv pelicanconfOriginal.py2 pelicanconfOriginal.py
 sed -e 's/^  - //' .travis.yml | tail -87 | head -68 | source /dev/stdin
 
+pelican
+cd output
+python -m SimpleHTTPServer
 
