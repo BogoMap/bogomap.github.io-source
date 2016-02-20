@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sed -e 's/^  - //' .travis.yml | tail -87 | head -68 | source /dev/stdin
+
+
