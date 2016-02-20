@@ -84,6 +84,10 @@ script:
   - rm -Rf less.js-2.5.1
   - cd ../../../../ ; pwd
 
+  # Modifies the original theme
+  - cd themes
+  - mv index.html mombacho/templates
+
   # Generates the package
   - pelican
   - find .
