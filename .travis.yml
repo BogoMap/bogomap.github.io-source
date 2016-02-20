@@ -87,6 +87,7 @@ script:
   # Modifies the original theme
   - cd themes
   - mv index.html mombacho/templates
+  - cd ..
 
   # Generates the package
   - pelican
