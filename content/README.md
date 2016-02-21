@@ -3,7 +3,7 @@ Date: 2016-02-17 10:20
 Modified: 2016-02-17 10:20
 Category: Mapa
 Tags: BogoMap, documentacion
-Slug: my-super-post
+Slug: README
 Authors: Andres Gomez
 Summary: Descripcion de las paginas que debe apuntar bogomap.co
 
