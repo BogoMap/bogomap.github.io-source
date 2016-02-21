@@ -21,19 +21,19 @@ script:
 
   # Retrieves the Flex template
   - cd themes/
-  - wget https://github.com/alexandrevicenzi/Flex/archive/v1.1.tar.gz ; tar -xvf v1.1.tar.gz ; rm v1.1.tar.gz
-  - mv Flex-1.1/static/css/* mombacho/static/css/ ; rmdir Flex-1.1/static/css/
-  - mv Flex-1.1/static/* mombacho/static/ ; rmdir Flex-1.1/static/
-  - mv Flex-1.1/templates/partial/* mombacho/templates/partial/ ; rmdir Flex-1.1/templates/partial/
-  - mv Flex-1.1/templates/* mombacho/templates/ ; rmdir Flex-1.1/templates/
+  - wget https://github.com/alexandrevicenzi/Flex/archive/v1.1.tar.gz ; tar -xvf v1.1.tar.gz ; rm -v v1.1.tar.gz
+  - mv Flex-1.1/static/css/* mombacho/static/css/ ; rmdir -v Flex-1.1/static/css/
+  - mv Flex-1.1/static/* mombacho/static/ ; rmdir -v Flex-1.1/static/
+  - mv Flex-1.1/templates/partial/* mombacho/templates/partial/ ; rmdir -v Flex-1.1/templates/partial/
+  - mv Flex-1.1/templates/* mombacho/templates/ ; rmdir -v Flex-1.1/templates/
   - mv Flex-1.1/* mombacho/
   - rm -Rf Flex-1.1/
   - cd ../ ; pwd
 
   # Retrieves Leaflet library
   - cd themes/mombacho/static/
-  # - wget https://github.com/Leaflet/Leaflet/archive/v0.7.1.tar.gz ; unzip leaflet.zip ; rm leaflet.zip
-  - wget http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip ; unzip leaflet.zip ; rm leaflet.zip
+  -#- wget https://github.com/Leaflet/Leaflet/archive/v0.7.1.tar.gz ; tar -xvf v0.7.1.tar.gz ; rm -v v0.7.1.tar.gz
+  - wget http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip ; unzip leaflet.zip ; rm -v leaflet.zip
   - mv images css/
   - mv leaflet.css css/
   - mv leaflet.js js/
@@ -42,15 +42,15 @@ script:
   # Retrieves Leaflet ActiveLayers library
   - cd themes/mombacho/static/js/
   - mkdir leaflet ; cd leaflet
-  - wget https://github.com/vogdb/Leaflet.ActiveLayers/archive/0.2.0.tar.gz ; tar -xvf 0.2.0.tar.gz ; rm 0.2.0.tar.gz
+  - wget https://github.com/vogdb/Leaflet.ActiveLayers/archive/0.2.0.tar.gz ; tar -xvf 0.2.0.tar.gz ; rm -v 0.2.0.tar.gz
   - mv Leaflet.ActiveLayers-0.2.0/src/ActiveLayers.js ./
-  - rm -Rf Leaflet.ActiveLayers-0.2.0
+  - rm -Rvf Leaflet.ActiveLayers-0.2.0
   - cd ../../../../../ ; pwd
 
   # Retrieves Leaflet ajax
   - cd themes/mombacho/static/js/leaflet/
-  - wget https://github.com/calvinmetcalf/leaflet-ajax/archive/v2.0.0.tar.gz ; tar -xvf v2.0.0.tar.gz ; rm v2.0.0.tar.gz 
-  - mv leaflet-ajax-2.0.0/dist/leaflet.ajax.js . ; rm -Rf leaflet-ajax-2.0.0
+  - wget https://github.com/calvinmetcalf/leaflet-ajax/archive/v2.0.0.tar.gz ; tar -xvf v2.0.0.tar.gz ; rm -v v2.0.0.tar.gz 
+  - mv leaflet-ajax-2.0.0/dist/leaflet.ajax.js . ; rm -Rvf leaflet-ajax-2.0.0
   - cd ../../../../../ ; pwd
 
   # Retrieves Leaflet hash
@@ -61,14 +61,14 @@ script:
   # Retrieves Leaflet zoomslider
   - cd themes/mombacho/static/js/leaflet/
   - mkdir zoomslider/ ; cd zoomslider/
-  - wget https://github.com/kartena/Leaflet.zoomslider/archive/v0.7.0.tar.gz ; tar -xvf v0.7.0.tar.gz ; rm v0.7.0.tar.gz
-  - mv Leaflet.zoomslider-0.7.0/src/L.Control.Zoomslider.* . ; rm -Rf Leaflet.zoomslider-0.7.0
+  - wget https://github.com/kartena/Leaflet.zoomslider/archive/v0.7.0.tar.gz ; tar -xvf v0.7.0.tar.gz ; rm -v v0.7.0.tar.gz
+  - mv Leaflet.zoomslider-0.7.0/src/L.Control.Zoomslider.* . ; rm -Rvf Leaflet.zoomslider-0.7.0
   - cd ../../../../../../ ; pwd
 
   # Retrieves Leaflet label
   - cd themes/mombacho/static/js/leaflet/
-  - wget https://github.com/Leaflet/Leaflet.label/archive/0.2.1.tar.gz ; tar -xvf 0.2.1.tar.gz ; rm 0.2.1.tar.gz
-  - mv Leaflet.label-0.2.1/dist/leaflet.label.js . ; rm -Rf Leaflet.label-0.2.1
+  - wget https://github.com/Leaflet/Leaflet.label/archive/0.2.1.tar.gz ; tar -xvf 0.2.1.tar.gz ; rm -v 0.2.1.tar.gz
+  - mv Leaflet.label-0.2.1/dist/leaflet.label.js . ; rm -Rvf Leaflet.label-0.2.1
   - cd ../../../../../ ; pwd
 
   # Retrieves jQuery
@@ -79,9 +79,9 @@ script:
 
   # Retrieves Less library
   - cd themes/mombacho/static/js/
-  - wget https://github.com/less/less.js/archive/v2.5.1.tar.gz ; tar -xvf v2.5.1.tar.gz ; rm v2.5.1.tar.gz
+  - wget https://github.com/less/less.js/archive/v2.5.1.tar.gz ; tar -xvf v2.5.1.tar.gz ; rm -v v2.5.1.tar.gz
   - mv less.js-2.5.1/dist/less.min.js ./
-  - rm -Rf less.js-2.5.1
+  - rm -Rvf less.js-2.5.1
   - cd ../../../../ ; pwd
 
   # Modifies the original theme
