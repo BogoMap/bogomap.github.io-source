@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -Rf themes
-git checkout themes
+rm -Rf themes/mombacho
+git checkout themes/mombacho
 rm Makefile develop_server.sh fabfile.py pelicanconf.py
 git checkout pelicanconfOriginal.py
 grep -v -e '^SITEURL' pelicanconfOriginal.py | sed -e 's/^#SITEURL/SITEURL/' > pelicanconfOriginal.py2
