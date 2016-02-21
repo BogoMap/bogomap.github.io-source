@@ -1,4 +1,7 @@
 output/
 pelicanconf.pyc
-
 themes/mombacho/
+Makefile
+develop_server.sh
+fabfile.py
+pelicanconf.py
