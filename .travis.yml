@@ -87,6 +87,7 @@ script:
   # Modifies the original theme
   - cd themes
   - mv index.html mombacho/templates
+  - mv style.less mombacho/static/css
   - cd ..
 
   # Generates the package
