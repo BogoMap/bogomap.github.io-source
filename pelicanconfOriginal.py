@@ -15,7 +15,6 @@ SITENAME = u'BogoMap.co - Mapa del sistema de transporte de Bogota'
 DEFAULT_DATE_FORMAT = ('%d %B %Y')
 # PELICAN - Base URL of your website.
 #SITEURL = 'http://localhost:8000'
-#SITEURL = 'http://localhost'
 SITEURL = 'http://bogomap.github.io'
 # PELICAN - Path to content directory to be processed by Pelican.
 PATH = 'content'
