@@ -6,9 +6,10 @@ rm Makefile develop_server.sh fabfile.py pelicanconf.py
 git checkout pelicanconfOriginal.py
 grep -v -e '^SITEURL' pelicanconfOriginal.py | sed -e 's/^#SITEURL/SITEURL/' > pelicanconfOriginal.py2
 mv pelicanconfOriginal.py2 pelicanconfOriginal.py
-sed -e 's/^  - //' .travis.yml | tail -92 | head -73 | source /dev/stdin
+sed -e 's/^  - //' .travis.yml | tail -95 | head -77 | source /dev/stdin
 
 pelican
+git checkout pelicanconfOriginal.py
 cd output
 python -m SimpleHTTPServer
 
