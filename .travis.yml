@@ -87,6 +87,7 @@ script:
   # Modifies the original theme
   - cd themes
   - cp index.html mombacho/templates
+  - cp base.html mombacho/templates
   - cp style.less mombacho/static/css
   - cd ..
 
