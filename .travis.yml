@@ -91,6 +91,9 @@ script:
   - cp style.less mombacho/static/css
   - cd ..
 
+  # Copies the extra directory
+  - cp -r extra/* output/
+
   # Generates the package
   - pelican
   - find .
