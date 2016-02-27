@@ -85,11 +85,13 @@ script:
   - cd ../../../../ ; pwd
 
   # Modifies the original theme
-  - cd themes
-  - cp index.html mombacho/templates
-  - cp base.html mombacho/templates
-  - cp style.less mombacho/static/css
-  - cd ..
+  - cd themes/
+  - cp index.html mombacho/templates/
+  - cp base.html mombacho/templates/
+  - cp style.less mombacho/static/css/
+  - cp *.ttf mombacho/static/fonts/
+  - cp *.woff mombacho/static/fonts/
+  - cd ../
 
   # Copies the extra directory
   - cp -r extra/* output/
