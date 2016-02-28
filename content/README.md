@@ -22,7 +22,7 @@ Slug: README
 Authors: Andres Gomez
 Summary: Descripcion de las paginas que debe apuntar bogomap.co
 
-# bogomap.github.io
+# rutas.bogomap.co
 Página principal de BogoMap
 
 Esta página contiene los siguientes links:
