@@ -33,6 +33,10 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     # Go into directory and copy data we're interested in to that directory
     cd built_website
     git rm -rf *
+
+    # This is only for BogoMap
+    git checkout extra/mapa/BogoMap-1.png extra/mapa/BogoMap-2.pdf extra/mapa/BogoMap-1.pdf extra/mapa/BogoMap-2.png
+
     rsync -rv --exclude=.git  ../$PELICAN_OUTPUT_FOLDER/* .
     # Add, commit and push files
     git add -f .
