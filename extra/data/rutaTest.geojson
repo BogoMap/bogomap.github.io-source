@@ -1,0 +1,287 @@
+{
+  "type": "relation",
+  "id": 6525438,
+  "members": [
+    {
+      "type": "way",
+      "ref": 439378290,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439378286,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700929,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439534445,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 42726566,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441828185,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700881,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440693389,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441828188,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440693391,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 29675286,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441850406,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 444195846,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 444195845,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441846062,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440693929,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700933,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441847935,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 156467499,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 398593298,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 398593297,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441846060,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 156467521,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 29643136,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 442225423,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700918,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440695716,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 441850409,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 29650394,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440695717,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 442960908,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439534442,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 129692184,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700900,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700887,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439534438,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 440526942,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 37290049,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439380438,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 341917210,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439380544,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439380546,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439380545,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 442964279,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 62229857,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 341917202,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 62229856,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439381425,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 439381424,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 438700921,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 444202395,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 171127337,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 160164905,
+      "role": ""
+    },
+    {
+      "type": "way",
+      "ref": 160164888,
+      "role": ""
+    }
+  ],
+  "tags": {
+    "from": "Juan Grande",
+    "name": "A1 - Juan Grande - Once de Mayo",
+    "network": "Servicio de Transporte Urbano Duitama",
+    "operator": "Tundama",
+    "public_transport:version": "2",
+    "ref": "A1",
+    "route": "bus",
+    "to": "11 de Mayo",
+    "type": "route"
+  }
+}
