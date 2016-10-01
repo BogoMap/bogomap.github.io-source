@@ -17,6 +17,7 @@ rm -Rf themes/mombacho
 git checkout themes/mombacho
 rm Makefile develop_server.sh fabfile.py pelicanconf.py
 git checkout pelicanconfOriginal.py
+rm -Rf output
 grep -v -e '^SITEURL' pelicanconfOriginal.py | sed -e 's/^#SITEURL/SITEURL/' > pelicanconfOriginal.py2
 mv pelicanconfOriginal.py2 pelicanconfOriginal.py
 LINE_START=$(awk '/Installs Pelican/{ print NR; exit }' .travis.yml)
